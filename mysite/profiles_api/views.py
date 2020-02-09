@@ -1,7 +1,8 @@
+from profiles_api import serializers
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from profiles_api import serializers
+from rest_framework.views import APIView
 
 
 class HelloApiView(APIView):
@@ -16,7 +17,7 @@ class HelloApiView(APIView):
             'Gives you the most control over you application logic',
             'Is mapped manually to URLs'
         ]
-        return Response({'message': 'Hello!', 'an_apiview': an_apiview})
+        return Response({'message': 'Hello!', 'an_apiview_benefits': an_apiview})
 
     def post(self, request):
         """Create a hello message with given name"""
